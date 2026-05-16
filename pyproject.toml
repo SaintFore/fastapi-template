@@ -1,0 +1,14 @@
+[project]
+name = "fastapi-template"
+version = "0.1.0"
+description = "A fastapi template"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alembic>=1.18.4",
+    "fastapi>=0.136.1",
+    "loguru>=0.7.3",
+    "pydantic-settings>=2.14.1",
+    "sqlmodel>=0.0.38",
+    "uvicorn[standard]>=0.47.0",
+]
