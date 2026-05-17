@@ -1,1 +1,27 @@
 .worktree
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Linters / type checkers
+.ruff_cache/
+.pyright/
+
+# Virtual env
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+
+# Local databases
+*.db
+*.db-shm
+*.db-wal
