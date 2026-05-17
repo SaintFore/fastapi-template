@@ -4,7 +4,7 @@ from sqlmodel import Session
 from app.db.session import get_session
 from app.models.item import Item
 from app.schemas.item import ItemCreate, ItemRead, ItemUpdate
-from app.services.item_service import get, get_all, create, delete, update
+from app.services.item_service import create, delete, get, get_all, update
 
 router = APIRouter(prefix="/items", tags=["items"])
 
