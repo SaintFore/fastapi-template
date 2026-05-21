@@ -4,16 +4,16 @@ A production-ready FastAPI project template with clean architecture, type safety
 
 ## Stack
 
-| Category | Tool |
-|----------|------|
-| Framework | [FastAPI](https://fastapi.tiangolo.com/) |
-| ORM | [SQLModel](https://sqlmodel.tiangolo.com/) (SQLAlchemy + Pydantic) |
-| Migrations | [Alembic](https://alembic.sqlalchemy.org/) |
-| Config | [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) |
-| Testing | [pytest](https://docs.pytest.org/) + [httpx](https://www.python-httpx.org/) |
-| Linting | [Ruff](https://docs.astral.sh/ruff/) |
-| Type Check | [Pyright](https://microsoft.github.io/pyright/) |
-| Package Manager | [uv](https://docs.astral.sh/uv/) |
+| Category        | Tool                                                                              |
+| --------------- | --------------------------------------------------------------------------------- |
+| Framework       | [FastAPI](https://fastapi.tiangolo.com/)                                          |
+| ORM             | [SQLModel](https://sqlmodel.tiangolo.com/) (SQLAlchemy + Pydantic)                |
+| Migrations      | [Alembic](https://alembic.sqlalchemy.org/)                                        |
+| Config          | [pydantic-settings](https://docs.pydantic.dev/latest/concepts/pydantic_settings/) |
+| Testing         | [pytest](https://docs.pytest.org/) + [httpx](https://www.python-httpx.org/)       |
+| Linting         | [Ruff](https://docs.astral.sh/ruff/)                                              |
+| Type Check      | [Pyright](https://microsoft.github.io/pyright/)                                   |
+| Package Manager | [uv](https://docs.astral.sh/uv/)                                                  |
 
 ## Project Structure
 
@@ -41,6 +41,12 @@ fastapi-template/
 ├── pyproject.toml
 ├── alembic.ini
 └── .env.example
+```
+
+## Use Project
+
+```bash
+pnpm dlx degit SaintFore/fastapi-template backend
 ```
 
 ## Quick Start
@@ -74,14 +80,14 @@ The API will be available at `http://localhost:8000`. Interactive docs at `http:
 
 ## API Endpoints
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `GET` | `/api/health` | Health check |
-| `GET` | `/api/items` | List all items |
-| `GET` | `/api/items/{id}` | Get item by ID |
-| `POST` | `/api/items` | Create new item |
-| `PATCH` | `/api/items/{id}` | Update item |
-| `DELETE` | `/api/items/{id}` | Delete item |
+| Method   | Path              | Description     |
+| -------- | ----------------- | --------------- |
+| `GET`    | `/api/health`     | Health check    |
+| `GET`    | `/api/items`      | List all items  |
+| `GET`    | `/api/items/{id}` | Get item by ID  |
+| `POST`   | `/api/items`      | Create new item |
+| `PATCH`  | `/api/items/{id}` | Update item     |
+| `DELETE` | `/api/items/{id}` | Delete item     |
 
 ## Development
 
@@ -120,10 +126,10 @@ uv run alembic revision --autogenerate -m "description"
 
 Environment variables (set in `.env`):
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `APP_NAME` | `FastAPI Template` | Application name |
-| `DEBUG` | `false` | Enable debug mode |
+| Variable       | Default              | Description                |
+| -------------- | -------------------- | -------------------------- |
+| `APP_NAME`     | `FastAPI Template`   | Application name           |
+| `DEBUG`        | `false`              | Enable debug mode          |
 | `DATABASE_URL` | `sqlite:///./app.db` | Database connection string |
 
 ## Architecture
