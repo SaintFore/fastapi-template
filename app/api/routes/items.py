@@ -25,7 +25,7 @@ def read_item(item_id: int, session: Annotated[Session, Depends(get_session)]) -
 
 
 @router.post("", response_model=ItemRead)
-def create_new_item(
+def create_item(
     item_in: ItemCreate,
     session: Annotated[Session, Depends(get_session)],
 ) -> Item:
@@ -33,14 +33,14 @@ def create_new_item(
 
 
 @router.delete("/{item_id}", status_code=204)
-def delete_n_item(item_id: int, session: Annotated[Session, Depends(get_session)]):
+def delete_item(item_id: int, session: Annotated[Session, Depends(get_session)]):
     item = delete(item_id, session)
     if not item:
         raise HTTPException(status_code=404, detail="Item not found")
 
 
 @router.patch("/{item_id}", response_model=ItemRead)
-def update_n_item(
+def update_item(
     item_id: int, item_in: ItemUpdate, session: Annotated[Session, Depends(get_session)]
 ) -> Item:
     item = update(item_id, item_in, session)
